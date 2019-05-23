@@ -1,0 +1,1 @@
+SnowTricks is a student project for Openclassrooms.
