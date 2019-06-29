@@ -8663,10 +8663,32 @@ Created using IcoMoon - icomoon.io
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(224, 23, 3, 0.6)));
-    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(0, 13, 85, .7)));
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(0, 13, 85, .7));
     /* Standard syntax */ }
-
+/*___________________________________________________________________CUSTOM__*/
+  .page-header.page-header-xs {
+    min-height: 5vh;
+    max-height: 40px; }
+  .page-header[filter-color="blue"] {
+    background: transparent;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(rgba(9, 41, 64, 1)));
+    background: linear-gradient(0deg, transparent, rgba(9, 41, 64, 1));
+    /* Standard syntax */ }
+  .text-blue {
+    color: #5ce2ff !important;
+  }
+  .ghost-page-pointer{
+    position: relative;
+    top: -100px;
+    height: 5px;
+    z-index: 100000;
+  }
+/*___________________________________________________________________________*/
 .clear-filter:after, .clear-filter:before {
   display: none; }
 
