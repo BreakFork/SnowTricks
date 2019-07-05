@@ -28,9 +28,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends AbstractController
 {
     /**
-     * Matches / exactly
-     *
-     * @route("/", name="Accueil")
+     * @Route("/", name="home")
      */
     public function homePage(): Response
     {
