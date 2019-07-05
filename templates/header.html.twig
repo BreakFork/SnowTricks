@@ -1,7 +1,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" data-background-color="black" color-on-scroll="20">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand font-weight-bold" href="{{ path('Accueil') }}">
+                <a class="navbar-brand font-weight-bold" href="{{ path('home') }}">
                     SnowTricks
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,29 +13,38 @@
             <div class="collapse navbar-collapse" data-nav-image="/assets/img/blurred-image-1.jpg" data-color="blue" style="opacity: .95;">
                 <ul class="navbar-nav ml-auto text-dark">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('Accueil') }}">
+                        <a class="nav-link" href="{{ path('home') }}">
                             <i class="fas fa-home"></i>
                             <p class="font-weight-bold ml-1">Accueil</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ path('Accueil') }}#tricks-index" class="nav-link">
+                        <a href="{{ path('home') }}#tricks-index" class="nav-link">
                             <i class="fas fa-snowboarding" style="font-size: 1.2em;"></i>
                             <p class="font-weight-bold ml-1">Tricks</p>
                         </a>
                     </li>
+                    {% if not app.user %}
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ path('securityLogin') }}" class="nav-link">
                             <i class="fas fa-sign-in-alt"></i>
                             <p class="font-weight-bold ml-1">Connexion</p>
                         </a>
                     </li>
+                        <li class="nav-item">
+                            <a href="{{ path('securityRegistration') }}" class="nav-link">
+                                <i class="fas fa-user-plus"></i>
+                                <p class="font-weight-bold ml-1">S'inscrire</p>
+                            </a>
+                        </li>
+                    {% else %}
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-user-plus"></i>
-                            <p class="font-weight-bold ml-1">S'inscrire</p>
+                        <a href="{{ path('securityLogout') }}" class="nav-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <p class="font-weight-bold ml-1">Déconnexion</p>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
